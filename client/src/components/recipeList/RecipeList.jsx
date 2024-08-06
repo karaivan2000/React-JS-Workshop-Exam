@@ -1,6 +1,13 @@
-
+import { useEffect, useState } from "react";
+import * as recipesApi from "../../api/recipes-api";
 
 export default function RecipeList() {
+    const [recipes, setRecipes] = useState;
+
+    useEffect(() => {
+        recipesApi.getAll()
+            .then(result => setRecipes(result));
+    }, []);
 
     return (
         <div className="cwrap">
