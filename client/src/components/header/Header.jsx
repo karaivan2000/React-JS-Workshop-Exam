@@ -15,33 +15,15 @@ export default function Header() {
                         </li>
                         <li>
                             <a href="recipes.html" title="Recipes">
-                                <span>Recipes</span>
+                                <span>All Recipes</span>
                             </a>
-                            <ul>
-                                <li>
-                                    <a href="recipes2.html" title="Recipes 2">
-                                        Recipes 2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="recipe.html" title="Recipe">
-                                        Recipe
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li>
-                            <a href="blog.html" title="Blog">
-                                <span>Blog</span>
+                            <a href="login.html" title="Login page">
+                                Login
                             </a>
-                            <ul>
-                                <li>
-                                    <a href="blog_single.html" title="Blog post">
-                                        Blog post
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
+
                         <li>
                             <a href="#" title="Pages">
                                 <span>Pages</span>
@@ -112,16 +94,13 @@ export default function Header() {
                             </ul>
                         </li>
                         <li>
-                            <a href="contact.html" title="Contact">
-                                <span>Contact</span>
+                            <a href="register.html" title="Register page">
+                                Register 
                             </a>
                         </li>
                         <li>
-                            <a
-                                href="http://themeforest.net/item/socialchef-social-recipe-html-template/8568727?ref=themeenergy"
-                                title="Buy now"
-                            >
-                                <span>Buy now</span>
+                            <a>
+                                <span>Logout</span>
                             </a>
                         </li>
                     </ul>
