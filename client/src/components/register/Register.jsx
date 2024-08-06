@@ -4,9 +4,6 @@ export default function Register() {
             <div className="modal container">
                 <h3>Register</h3>
                 <div className="f-row">
-                    <input type="text" placeholder="Your name" />
-                </div>
-                <div className="f-row">
                     <input type="email" placeholder="Your email" />
                 </div>
                 <div className="f-row">
@@ -19,7 +16,7 @@ export default function Register() {
                     <input type="submit" defaultValue="register" />
                 </div>
                 <p>
-                    Already have an account yet? <a href="login.html">Log in.</a>
+                    Already have an account yet? <a href="/login">Log in.</a>
                 </p>
             </div>
         </section>
