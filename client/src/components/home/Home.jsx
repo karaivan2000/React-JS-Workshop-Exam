@@ -46,7 +46,148 @@ export default function Home() {
                             </header>
                             {/*entries*/}
                             <div className="entries row">
-
+                                {/*item*/}
+                                <div className="entry one-third">
+                                    <figure>
+                                        <img src="images/img.jpg" alt="" />
+                                        <figcaption>
+                                            <a href="recipe.html">
+                                                <i className="icon icon-themeenergy_eye2" />{" "}
+                                                <span>View recipe</span>
+                                            </a>
+                                        </figcaption>
+                                    </figure>
+                                    <div className="container">
+                                        <h2>
+                                            <a href="recipe.html">
+                                                Thai fried rice with fruit and vegetables
+                                            </a>
+                                        </h2>
+                                        <div className="actions">
+                                            <div>
+                                                <div className="difficulty">
+                                                    <i className="ico i-medium" />
+                                                    <a href="#">medium</a>
+                                                </div>
+                                                <div className="likes">
+                                                    <i className="fa fa-heart" />
+                                                    <a href="#">10</a>
+                                                </div>
+                                                <div className="comments">
+                                                    <i className="fa fa-comment" />
+                                                    <a href="recipe.html#comments">27</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/*item*/}
+                                {/*item*/}
+                                <div className="entry one-third">
+                                    <figure>
+                                        <img src="images/img.jpg" alt="" />
+                                        <figcaption>
+                                            <a href="recipe.html">
+                                                <i className="icon icon-themeenergy_eye2" />{" "}
+                                                <span>View recipe</span>
+                                            </a>
+                                        </figcaption>
+                                    </figure>
+                                    <div className="container">
+                                        <h2>
+                                            <a href="recipe.html">
+                                                Spicy Morroccan prawns with cherry tomatoes
+                                            </a>
+                                        </h2>
+                                        <div className="actions">
+                                            <div>
+                                                <div>
+                                                    <h6>Category: Desert</h6>
+                                                    
+                                                </div>
+                                                <div>
+                                                    <h6>Cookoing Time: 60min</h6>
+                                                    
+                                                </div>
+                                                <div className="comments">
+                                                    <h6>People: 4</h6>
+                                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/*item*/}
+                                {/*item*/}
+                                <div className="entry one-third">
+                                    <figure>
+                                        <img src="images/img.jpg" alt="" />
+                                        <figcaption>
+                                            <a href="recipe.html">
+                                                <i className="icon icon-themeenergy_eye2" />{" "}
+                                                <span>View recipe</span>
+                                            </a>
+                                        </figcaption>
+                                    </figure>
+                                    <div className="container">
+                                        <h2>
+                                            <a href="recipe.html">Super easy blueberry cheesecake</a>
+                                        </h2>
+                                        <div className="actions">
+                                            <div>
+                                                <div className="difficulty">
+                                                    <i className="ico i-easy" />
+                                                    <a href="#"></a>
+                                                </div>
+                                                <div className="likes">
+                                                    <i className="fa fa-heart" />
+                                                    <a href="#">10</a>
+                                                </div>
+                                                <div className="comments">
+                                                    <i className="fa fa-comment" />
+                                                    <a href="recipe.html#comments">27</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/*item*/}
+                                {/*item*/}
+                                <div className="entry one-third">
+                                    <figure>
+                                        <img src="images/img.jpg" alt="" />
+                                        <figcaption>
+                                            <a href="recipe.html">
+                                                <i className="icon icon-themeenergy_eye2" />{" "}
+                                                <span>View recipe</span>
+                                            </a>
+                                        </figcaption>
+                                    </figure>
+                                    <div className="container">
+                                        <h2>
+                                            <a href="recipe.html">
+                                                Refreshing banana split with a twist for adults
+                                            </a>
+                                        </h2>
+                                        <div className="actions">
+                                            <div>
+                                                <div className="difficulty">
+                                                    <i className="ico i-hard" />
+                                                    <a href="#">hard</a>
+                                                </div>
+                                                <div className="likes">
+                                                    <i className="fa fa-heart" />
+                                                    <a href="#">10</a>
+                                                </div>
+                                                <div className="comments">
+                                                    <i className="fa fa-comment" />
+                                                    <a href="recipe.html#comments">27</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/*item*/}
                                 {/*item*/}
                                 <div className="entry one-third">
                                     <figure>
@@ -101,17 +242,17 @@ export default function Home() {
                                             </a>
                                         </h2>
                                         <div className="actions">
-                                            <div className="foot-nav">
-                                                <div>
-                                                    <h6>Difficulty: hard</h6>
+                                            <div>
+                                                <div className="difficulty">
+                                                    <i className="ico i-hard" />
+                                                    <a href="#">hard</a>
                                                 </div> 
-
-                                                <div>                                        
-                                                    <h6>Category: Desert</h6>
+                                                <div className="likes">                                        
+                                                    <h6>Category</h6>
                                                 </div>
-
-                                                <div>
-                                                    <h6>People: 4</h6>                                                                                                      
+                                                <div className="comments">
+                                                    <h6>People</h6>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
