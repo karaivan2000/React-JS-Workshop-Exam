@@ -260,6 +260,10 @@ export default function Home() {
                                 </div>
                                 {/*item*/}
 
+                                {/* Display paragraph: If there is no games  */}
+
+                                <h3 class="no-articles">No recipes yet</h3>
+
                             </div>
                             {/*//entries*/}
                         </div>

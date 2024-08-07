@@ -46,9 +46,13 @@ export default function RecipeEdit() {
                                     <input type="text" placeholder="Serves how many people?" />
                                 </div>
                                 <div className="third">
-                                    <select>
-                                        <option selected="selected">Select a category</option>
-                                    </select>
+                                <label htmlFor="category">Category:</label>
+                                <input
+                                  type="text"
+                                  id="category"
+                                  name="category"
+                                  placeholder="Enter recipe category..."
+                                />
                                 </div>
                             </div>
                         </section>
@@ -69,12 +73,7 @@ export default function RecipeEdit() {
                                 <div className="small">
                                     <input type="text" placeholder="Quantity" />
                                 </div>
-                                <div className="third">
-                                    <select>
-                                        <option selected="selected">Select a category</option>
-                                    </select>
-                                </div>
-                                <button className="remove">-</button>
+                                <button className="remove">Remove</button>
                             </div>
                             <div className="f-row full">
                                 <button className="add">Add an ingredient</button>

@@ -95,6 +95,14 @@ export default function RecipeDetails() {
                             <dd>Sprinkles</dd>
                         </dl>
                     </article>
+                    <div className="f-row full">
+                        <button className="add">Edit</button>
+                    </div>
+                    <div className="f-row full">
+                        <button className="add">Remove</button>
+                    </div>
+                    <button className="remove">Edit</button> 
+                    <button className="remove">Remove</button>
                     {/*//one-third*/}
                 </div>
             </div>
