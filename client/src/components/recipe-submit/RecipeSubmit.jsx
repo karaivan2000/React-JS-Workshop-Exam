@@ -23,32 +23,31 @@ export default function RecipeSubmit() {
                     <div className="submit_recipe container">
                         <form>
                             <section>
-                                <h2>Basics</h2>
-                                <p>All fields are required.</p>
                                 <div className="f-row">
                                     <div className="full">
                                         <input type="text" placeholder="Recipe title" />
                                     </div>
                                 </div>
+                                <div className="image-wrap">
+                                    <img src="./images/CoverFire.png" />
+                                </div>
+
                                 <div className="f-row">
                                     <div className="third">
-                                        <input type="text" placeholder="Preparation time" />
+                                        <input type="text" placeholder="Upload a photo..." />
                                     </div>
                                     <div className="third">
                                         <input type="text" placeholder="Cooking time" />
                                     </div>
                                     <div className="third">
-                                        <input type="text" placeholder="Difficulty" />
+                                        <input type="text" placeholder="Enter recipe category..." />
                                     </div>
+
+
                                 </div>
                                 <div className="f-row">
                                     <div className="third">
                                         <input type="text" placeholder="Serves how many people?" />
-                                    </div>
-                                    <div className="third">
-                                        <select>
-                                            <option selected="selected">Select a category</option>
-                                        </select>
                                     </div>
                                 </div>
                             </section>
@@ -59,6 +58,7 @@ export default function RecipeSubmit() {
                                         <textarea placeholder="Recipe title" defaultValue={""} />
                                     </div>
                                 </div>
+                                
                             </section>
                             <section>
                                 <h2>Ingredients</h2>
@@ -66,19 +66,8 @@ export default function RecipeSubmit() {
                                     <div className="large">
                                         <input type="text" placeholder="Ingredient" />
                                     </div>
-                                    <div className="small">
-                                        <input type="text" placeholder="Quantity" />
-                                    </div>
-                                    <div className="third">
-                                        <select>
-                                            <option selected="selected">Select a category</option>
-                                        </select>
-                                    </div>
-                                    <button className="remove">-</button>
                                 </div>
-                                <div className="f-row full">
-                                    <button className="add">Add an ingredient</button>
-                                </div>
+
                             </section>
                             <section>
                                 <h2>
@@ -89,35 +78,9 @@ export default function RecipeSubmit() {
                                     <div className="full">
                                         <input type="text" placeholder="Instructions" />
                                     </div>
-                                    <button className="remove">-</button>
-                                </div>
-                                <div className="f-row full">
-                                    <button className="add">Add a step</button>
                                 </div>
                             </section>
-                            <section>
-                                <h2>Photo</h2>
-                                <div className="f-row full">
-                                    <input type="file" />
-                                </div>
-                            </section>
-                            <section>
-                                <h2>
-                                    Status{" "}
-                                    <span>
-                                        (would you like to further edit this recipe or are you ready to
-                                        publish it?)
-                                    </span>
-                                </h2>
-                                <div className="f-row full">
-                                    <input type="radio" id="r1" name="radio" />
-                                    <label htmlFor="r1">I am still working on it</label>
-                                </div>
-                                <div className="f-row full">
-                                    <input type="radio" id="r2" name="radio" />
-                                    <label htmlFor="r2">I am ready to publish this recipe</label>
-                                </div>
-                            </section>
+
                             <div className="f-row full">
                                 <input
                                     type="submit"

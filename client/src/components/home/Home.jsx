@@ -101,17 +101,17 @@ export default function Home() {
                                         </h2>
                                         <div className="actions">
                                             <div>
-                                                <div className="difficulty">
-                                                    <i className="ico i-hard" />
-                                                    <a href="#">hard</a>
+                                                <div>
+                                                    <h6>Category: Desert</h6>
+                                                    
                                                 </div>
-                                                <div className="likes">
-                                                    <i className="fa fa-heart" />
-                                                    <a href="#">10</a>
+                                                <div>
+                                                    <h6>Cookoing Time: 60min</h6>
+                                                    
                                                 </div>
                                                 <div className="comments">
-                                                    <i className="fa fa-comment" />
-                                                    <a href="recipe.html#comments">27</a>
+                                                    <h6>People: 4</h6>
+                                                            
                                                 </div>
                                             </div>
                                         </div>
@@ -137,7 +137,7 @@ export default function Home() {
                                             <div>
                                                 <div className="difficulty">
                                                     <i className="ico i-easy" />
-                                                    <a href="#">easy</a>
+                                                    <a href="#"></a>
                                                 </div>
                                                 <div className="likes">
                                                     <i className="fa fa-heart" />
@@ -246,28 +246,24 @@ export default function Home() {
                                                 <div className="difficulty">
                                                     <i className="ico i-hard" />
                                                     <a href="#">hard</a>
-                                                </div>
-                                                <div className="likes">
-                                                    <i className="fa fa-heart" />
-                                                    <a href="#">10</a>
+                                                </div> 
+                                                <div className="likes">                                        
+                                                    <h6>Category</h6>
                                                 </div>
                                                 <div className="comments">
-                                                    <i className="fa fa-comment" />
-                                                    <a href="recipe.html#comments">27</a>
+                                                    <h6>People</h6>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 {/*item*/}
-                                <div className="quicklinks">
-                                    <a href="#" className="button">
-                                        More recipes
-                                    </a>
-                                    <a href="javascript:void(0)" className="button scroll-to-top">
-                                        Back to top
-                                    </a>
-                                </div>
+
+                                {/* Display paragraph: If there is no games  */}
+
+                                <h3 class="no-articles">No recipes yet</h3>
+
                             </div>
                             {/*//entries*/}
                         </div>
