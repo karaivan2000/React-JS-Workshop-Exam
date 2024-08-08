@@ -5,7 +5,8 @@ html {overflow-y: scroll;-webkit-text-size-adjust:auto;-webkit-overflow-scrollin
 
 img,fieldset,abbr,acronym{border:0;}
 article,aside,figure,figcaption,hgroup,footer,header,nav,section,video,object{display:block;}
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1;max-width: 100%; }
+audio, canvas, video { display: inline-block;  max-width: 100%; }
+
 
 /*LAYOUT*/
 .head 		{float:right;width:100%;position:relative;z-index:2;height:90px;}
@@ -290,7 +291,12 @@ section.cta h2 	{padding:0;line-height:48px;}
 .post .entry-content h2 	{font-size:22px;line-height:1.2;font-weight:500;padding:8px 0 23px;}
 .post h2 a 				{color:#444;}
 
-.actions				{display:inline-block;width:100%;vertical-align:sub;float:left;font-size:13px;}
+.actions				{
+  display: inline-block; 
+  width: 100%;
+  font-size: 13px;
+  vertical-align: sub; 
+}
 .actions > div			{display:inline-block;width:100%;border-top:1px solid #ddd;padding:15px 0 0;margin:0 0 10px;}	
 .post .actions 			{width:455px;padding:0 20px;}
 .post .actions > div 		{margin:11px 0 0;}
@@ -357,7 +363,8 @@ section.cta h2 	{padding:0;line-height:48px;}
 .recipe .intro p {color:#666;padding:0 0 15px;}
 
 .instructions 		{float:right;width:100%;}
-.instructions ol 				{counter-reset: li;list-style: none;*list-style: decimal;padding: 0;margin:0;}
+.instructions ol 				.custom-list { counter-reset: li; list-style: none; padding: 0; margin: 0; }
+
 .instructions li				{position: relative;display: block;background: #fff;color: #666;font-size:14px;padding:15px 20px 18px;min-height:50px;margin:0 50px 30px 0;-webkit-box-shadow:0 0 1px rgba(0,0,0,.2);-moz-box-shadow:0 0 1px rgba(0,0,0,.2);box-shadow:0 0 1px rgba(0,0,0,.2);}
 .instructions li:before		{content: counter(li);counter-increment: li;position: absolute;	right: -50px;top:0;background: #FF8E88;color:#fff;height:50px;width: 50px;line-height: 50px;text-align: center;font-size:33px;-webkit-text-shadow:0 1px 0 rgba(0,0,0,.15);-moz-text-shadow:0 1px 0 rgba(0,0,0,.15);text-shadow:0 1px 0 rgba(0,0,0,.15);}
 .instructions li:after		{position: absolute;	content: '';border: .5em solid transparent;right:0;top: 20px;-webkit-transition:all 0.2s ease-in;-moz-transition:all 0.2s ease-in;-o-transition:all 0.2s ease-in;-ms-transition:all 0.2s ease-in;transition:all 0.2s ease-in;}
@@ -521,12 +528,30 @@ dl 			{display:inline-block;width:100%;margin:0 0 22px;}
 fieldset 							{display:inline-block;width:100%;}
 label 							{display:inline-block;cursor: pointer;color:#666;position:relative;}
 input,textarea 						{outline: none;}
-button, input, select, textarea 		{font-family:'Raleway',Arial,Helvetica,sans-serif;margin: 0; vertical-align: baseline; *vertical-align: middle;outline:none;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none; -webkit-transition:all 0.2s ease-in;-moz-transition:all 0.2s ease-in;-o-transition:all 0.2s ease-in;-ms-transition:all 0.2s ease-in;transition:all 0.2s ease-in;}
-button, input[type="button"], input[type="reset"], input[type="submit"] {border:none; cursor: pointer; text-transform:uppercase;-webkit-appearance: button; background:#FF7B74;color:#fff;text-align:center;font-size:13px;font-weight:700;padding:11px 14px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+button, input, select, textarea 	* {
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  margin: 0;                                           
+  vertical-align: baseline;                            
+  outline: none;                                       
+  box-shadow: none;                                    
+  transition: all 0.2s ease-in;                        
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {border:none; cursor: pointer; text-transform:uppercase; background-color: #FF7B74; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background 0.3s; background:#FF7B74;color:#fff;text-align:center;font-size:13px;font-weight:700;padding:11px 14px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
 button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {background:#F4716A;}
 input[type="checkbox"], input[type="radio"] { box-sizing: border-box; width:100%;height:100%;}
-input[type="search"] { -webkit-appearance: textfield;}
+input[type="search"] input[type="text"], 
+textarea {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  border: 1px solid #ccc; 
+  padding: 10px;         
+  font-size: 16px;       
+  border-radius: 4px;    
+  width: 100%;           
+}
 input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 input[type="search"],input[type="email"],input[type="text"],input[type="number"],input[type="password"],textarea {width:100% !important;border:1px solid #ddd;color:#666;font-size:13px;font-weight:400;padding:9px 10px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 textarea	{resize: none;height:150px;}
@@ -553,7 +578,11 @@ form .alert {display:none;}
 
 /* General settings */
 div.selector, div.selector span, div.checker span, div.radio span, div.uploader, div.uploader span.action, div.button, div.button span {-webkit-font-smoothing: antialiased; }
-div.selector, div.checker, div.button, div.radio, div.uploader {display: -moz-inline-box;display: inline-block;*display: inline;zoom: 1;vertical-align: middle;}
+div.selector, div.checker, div.button, div.radio, div.uploader .element {
+  display: inline-block;    
+  vertical-align: middle;   
+}
+
 div.selector:focus, div.checker:focus, div.button:focus, div.radio:focus, div.uploader:focus {outline: 0; }
 div.selector, div.selector *, div.radio, div.radio *, div.checker, div.checker *, div.uploader, div.uploader *, div.button, div.button * {margin: 0;padding: 0; }
 
@@ -568,7 +597,11 @@ input.uniform-input.focus,select.uniform-multiselect.focus,textarea.uniform.focu
  * Keeping this as :active to remove browser styles */
 div.checker input,
 input[type="search"],
-input[type="search"]:active 			{-moz-appearance: none;-webkit-appearance: none; }
+input[type="search"]:active 			input {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none; /* Standard */
+}
 
 /* Select */
 div.selector		 				{font-size:13px;border:1px solid #ddd;line-height:37px;height:37px;position: relative;overflow: hidden;width:100% !important;padding-right:10px;background:#fff;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
@@ -585,20 +618,45 @@ div.checker 						{position:relative;top:-2px;margin-left:10px;}
 div.checker, 
 div.checker span, 
 div.checker input 					{width:20px;height:20px; }
-div.checker span 					{display: -moz-inline-box;display: inline-block;*display: inline;zoom: 1;text-align: center;background:#fff;border:1px solid #ddd;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+div.checker span 					.element {
+  display: inline-block;      
+  text-align: center;         
+  background: #fff;          
+  border: 1px solid #ddd;    
+  border-radius: 3px;         
+}
+
 div.checker span.checked 	 {position:relative;}
 div.checker span.checked:before {content: "\f00c";font-family: FontAwesome;color:#ff7b74;position:absolute;top:0;left:2px;}
-div.checker input 					{opacity: 0;filter: alpha(opacity=0);-moz-opacity: 0;border: none;background: none;display: -moz-inline-box;display: inline-block;*display: inline;zoom: 1; }
+div.checker input 					.element {
+  opacity: 0;            
+  border: none;          
+  background: none;      
+  display: inline-block; 
+}
 
 /* Radio */
 div.radio 					{position: relative;top:-2px;margin-left:10px;}
 div.radio, 
 div.radio span, 
 div.radio input 				{width:20px;height:20px; }
-div.radio span 				{display: -moz-inline-box;display: inline-block;*display: inline;zoom: 1;text-align: center;background:#fff;border:1px solid #ddd;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;}
+div.radio span 				div.radio span {
+  display: inline-block;      /* Задава елемента да бъде inline с характеристики на блок */
+  text-align: center;         /* Центриране на текста в елемента */
+  background: #fff;           /* Задава бял фон */
+  border: 1px solid #ddd;     /* Задава сив контур с ширина 1 пиксел */
+  border-radius: 10px;        /* Закръгляне на ъглите на елемента */
+}
+
 div.radio span.checked		{position:relative;}
 div.radio span.checked:before 		{content: "";width:12px;height:12px;background:#ff7b74;position:absolute;top:3px;left:3px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;}
-div.radio input 				{opacity: 0;filter: alpha(opacity=0);-moz-opacity: 0;border: none;background: none;display: -moz-inline-box;display: inline-block;*display: inline;zoom: 1;text-align: center;}
+div.radio input 				{
+  opacity: 0;
+  border: none;
+  background: none;
+  display: inline-block;
+  text-align: center;
+}
 
 
 /* Uploader */
@@ -611,10 +669,7 @@ div.uploader.focus 							{border-color:#aaa;color:#666;}
 div.uploader.hover span.action, 
 div.uploader.focus span.action 				{background:#f4716a;} 
 div.uploader.focus.active span.action 		{border-color:#aaa;color:#666;}
-div.uploader.disabled, 
-div.uploader.disabled.active 				{}
-div.uploader.disabled span.action, 
-div.uploader.disabled.active span.action 		{}
+
 
 /*CONTACT PAGE*/
 .modal 				{display:inline-block;width:48%;margin:25px auto;padding-bottom:0;text-align:right;float:none;}
