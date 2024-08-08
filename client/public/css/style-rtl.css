@@ -25,11 +25,23 @@ audio, canvas, video { display: inline-block;  max-width: 100%; }
 .one-fourth 		 {float:right;width:25%;padding:0 15px 30px;max-width:100%;}
 .one-fifth 		 {float:right;width:20%;padding:0 15px 30px;max-width:100%;}
 .one-sixth 		 {float:right;width:16.66%;padding:0 15px 30px;max-width:100%;}
-
+#no-recipes {
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 100px;
+  font-family: "Agency FB";
+}
 .content 				{float:right;}
 .cwrap					{float:right;width:100%;overflow-x:hidden;border-bottom:1px solid rgba(0,0,0,.15);-webkit-box-shadow:0 1px 0 rgba(255,255,255,1);-moz-box-shadow:0 1px 0 rgba(255,255,255,1);box-shadow:0 1px 0 rgba(255,255,255,1);margin:0 0 30px;}
 .cwrap:last-child		{border:none;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;margin:0;}
-
+.cwrap .no-recipes {
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 60px;
+  font-family: "Agency FB";
+}
 .entries .one-fourth		{min-height:365px;}
 
 .clearfix:before, 
@@ -578,7 +590,7 @@ form .alert {display:none;}
 
 /* General settings */
 div.selector, div.selector span, div.checker span, div.radio span, div.uploader, div.uploader span.action, div.button, div.button span {-webkit-font-smoothing: antialiased; }
-div.selector, div.checker, div.button, div.radio, div.uploader .element {
+div.selector, div.checker, div.button, div.radio, div.uploader  {
   display: inline-block;    
   vertical-align: middle;   
 }
@@ -617,8 +629,8 @@ div.selector.focus span 			{color:#666;}
 div.checker 						{position:relative;top:-2px;margin-left:10px;}
 div.checker, 
 div.checker span, 
-div.checker input 					{width:20px;height:20px; }
-div.checker span 					.element {
+div.checker input 					{opacity: 0;filter: alpha(opacity=0);-moz-opacity: 0;border: none;background: none; }
+div.checker input 					{
   display: inline-block;      
   text-align: center;         
   background: #fff;          
@@ -628,7 +640,7 @@ div.checker span 					.element {
 
 div.checker span.checked 	 {position:relative;}
 div.checker span.checked:before {content: "\f00c";font-family: FontAwesome;color:#ff7b74;position:absolute;top:0;left:2px;}
-div.checker input 					.element {
+div.checker input {
   opacity: 0;            
   border: none;          
   background: none;      
