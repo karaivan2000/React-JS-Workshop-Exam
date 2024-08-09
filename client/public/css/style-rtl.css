@@ -609,7 +609,7 @@ input.uniform-input.focus,select.uniform-multiselect.focus,textarea.uniform.focu
  * Keeping this as :active to remove browser styles */
 div.checker input,
 input[type="search"],
-input[type="search"]:active 			input {
+input[type="search"]:active {
   -moz-appearance: none; /* Firefox */
   -webkit-appearance: none; /* Safari and Chrome */
   appearance: none; /* Standard */

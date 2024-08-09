@@ -543,11 +543,33 @@ button, input, select, textarea 	* {
   box-shadow: none;                                    
   transition: all 0.2s ease-in;                        
 }
-button, input[type="button"], input[type="reset"], input[type="submit"] {border:none; cursor: pointer; text-transform:uppercase;-webkit-appearance: button; background:#FF7B74;color:#fff;text-align:center;font-size:13px;font-weight:700;padding:11px 14px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  border: none;                   /* Премахване на границите */
+  cursor: pointer;               /* Задава курсора на мишката да бъде показалец */
+  text-transform: uppercase;     /* Преобразува текста в главни букви */
+  appearance: button;            /* Задава стандартен външен вид за бутона */
+  background: #FF7B74;           /* Задава цвят на фона */
+  color: #fff;                   /* Задава цвят на текста */
+  text-align: center;            /* Центриране на текста */
+  font-size: 13px;               /* Задава размер на шрифта */
+  font-weight: 700;              /* Задава удебелен шрифт */
+  padding: 11px 14px;            /* Задава вътрешни отстояния */
+  border-radius: 3px;            /* Закръгляне на ъглите на бутона */
+}
+
 button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
 button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {background:#F4716A;}
 input[type="checkbox"], input[type="radio"] { box-sizing: border-box; width:100%;height:100%;}
-input[type="search"] { -webkit-appearance: textfield;}
+input[type="search"] { 
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  border: 1px solid #ccc; 
+  padding: 10px;         
+  font-size: 16px;       
+  border-radius: 4px;    
+  width: 100%;           
+}
 input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 input[type="search"],input[type="email"],input[type="text"],input[type="number"],input[type="password"],textarea {width:100% !important;border:1px solid #ddd;color:#666;font-size:13px;font-weight:400;padding:9px 10px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 textarea	{resize: none;height:150px;}
@@ -592,7 +614,11 @@ input.uniform-input.focus,select.uniform-multiselect.focus,textarea.uniform.focu
  * Keeping this as :active to remove browser styles */
 div.checker input,
 input[type="search"],
-input[type="search"]:active 			{-moz-appearance: none;-webkit-appearance: none; }
+input[type="search"]:active  {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none; /* Standard */
+}
 
 /* Select */
 div.selector		 				{font-size:13px;border:1px solid #ddd;line-height:37px;height:37px;position: relative;overflow: hidden;width:100% !important;padding-left:10px;background:#fff;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
@@ -655,10 +681,7 @@ div.uploader.focus 							{border-color:#aaa;color:#666;}
 div.uploader.hover span.action, 
 div.uploader.focus span.action 				{background:#f4716a;} 
 div.uploader.focus.active span.action 		{border-color:#aaa;color:#666;}
-div.uploader.disabled, 
-div.uploader.disabled.active 				{}
-div.uploader.disabled span.action, 
-div.uploader.disabled.active span.action 		{}
+
 
 /*CONTACT PAGE*/
 .modal 				{display:inline-block;width:48%;margin:25px auto;padding-bottom:0;text-align:left;float:none;}
