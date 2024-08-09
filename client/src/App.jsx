@@ -7,6 +7,7 @@ import Login from './components/login/Login';
 import Register from './components/register/Register';
 import RecipeSubmit from './components/recipe-submit/RecipeSubmit';
 import RecipeList from './components/recipeList/RecipeList';
+import RecipeEdit from './components/recipe-edit/RecipeEdit';
 
 
 
@@ -26,7 +27,7 @@ function App() {
                 
                
             </Routes>
-
+            
             <Footer />
         </>
     )

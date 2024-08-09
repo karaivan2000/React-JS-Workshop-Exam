@@ -2,15 +2,10 @@ export default function RecipeSubmit() {
     return (
         <div className="wrap clearfix">
             {/*breadcrumbs*/}
+            <div className="wrap clearfix">
+            {/*breadcrumbs*/}
             <nav className="breadcrumbs">
-                <ul>
-                    <li>
-                        <a href="index.html" title="Home">
-                            Home
-                        </a>
-                    </li>
-                    <li>Submit a recipe</li>
-                </ul>
+
             </nav>
             {/*//breadcrumbs*/}
             {/*row*/}
@@ -25,29 +20,32 @@ export default function RecipeSubmit() {
                             <section>
                                 <div className="f-row">
                                     <div className="full">
-                                        <input type="text" placeholder="Recipe title" />
+                                        <label htmlFor="rec-title">Recipe title:</label>
+                                        <input type="text" name="title" placeholder="Recipe title" />
                                     </div>
                                 </div>
-                                <div className="image-wrap">
-                                    <img src="./images/CoverFire.png" />
-                                </div>
+
 
                                 <div className="f-row">
                                     <div className="third">
+                                        <label htmlFor="game-img">Image:</label>
                                         <input type="text" placeholder="Upload a photo..." />
                                     </div>
                                     <div className="third">
-                                        <input type="text" placeholder="Cooking time" />
+                                        <label htmlFor="cooking-time">Cooking time:</label>
+                                        <input type="text" name="cooking" placeholder="Cooking time" />
                                     </div>
                                     <div className="third">
-                                        <input type="text" placeholder="Enter recipe category..." />
+                                        <label htmlFor="category">Category:</label>
+                                        <input type="text" name="category" placeholder="Enter recipe category..." />
                                     </div>
 
 
                                 </div>
                                 <div className="f-row">
                                     <div className="third">
-                                        <input type="text" placeholder="Serves how many people?" />
+                                        <label htmlFor="category">Serves how many people:</label>
+                                        <input type="text" name="people" placeholder="Serves how many people?" />
                                     </div>
                                 </div>
                             </section>
@@ -55,16 +53,16 @@ export default function RecipeSubmit() {
                                 <h2>Description</h2>
                                 <div className="f-row">
                                     <div className="full">
-                                        <textarea placeholder="Recipe title" defaultValue={""} />
+                                        <textarea name="description" placeholder="Description" defaultValue={""} />
                                     </div>
                                 </div>
-                                
+
                             </section>
                             <section>
                                 <h2>Ingredients</h2>
                                 <div className="f-row ingredient">
                                     <div className="large">
-                                        <input type="text" placeholder="Ingredient" />
+                                        <input type="text" name="ingredient" placeholder="Ingredient" />
                                     </div>
                                 </div>
 
@@ -76,7 +74,7 @@ export default function RecipeSubmit() {
                                 </h2>
                                 <div className="f-row instruction">
                                     <div className="full">
-                                        <input type="text" placeholder="Instructions" />
+                                        <input type="text" name="instructions" placeholder="Instructions" />
                                     </div>
                                 </div>
                             </section>
@@ -95,6 +93,8 @@ export default function RecipeSubmit() {
                 {/*//content*/}
             </div>
             {/*//row*/}
+        </div>
+
         </div>
 
     );
